@@ -24,7 +24,9 @@
   letter-spacing: -0.56px;
 }
 
-
+.text-stroke{
+  display: block;
+}
 
 .hero-bottom, .hero-bottom::before, .hero-bottom::after {
   position: absolute;

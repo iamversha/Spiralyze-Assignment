@@ -43,11 +43,14 @@ function showSlides(n) {
 
 document.getElementById("playButton").addEventListener("click", function () {
   let video = document.getElementById("myVideo");
+  let videoPlayer = document.getElementById("videoPlayer");
 
   if (video.paused) {
     video.muted = false; // Ensure sound plays
     video.play();
+    videoPlayer.classList.add("play");
   } else {
     video.pause();
+    videoPlayer.classList.remove("play");
   }
 });
