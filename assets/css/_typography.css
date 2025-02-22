@@ -22,3 +22,6 @@ a {
 a:hover {
   color: var(--dark-color);
 }
+.text-center{
+  text-align: center;
+}

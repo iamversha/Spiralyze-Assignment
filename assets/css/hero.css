@@ -17,32 +17,11 @@
   margin-bottom: 20px;
 }
 
+
 .hero-left p {
   font-size: 1.125rem;
   margin-bottom: 20px;
-}
-
-.cta-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-  background: #48b09a;
-}
-
-/* Hero Right (Form Wrapper) */
-.hero-right {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.56px;
 }
 
 
