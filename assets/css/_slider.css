@@ -13,6 +13,7 @@
 .slider-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  position: relative;
 }
 
 .slide {
@@ -20,51 +21,34 @@
   padding: 10px;
 }
 
-button.next {
+.slider-arrow {
   position: absolute;
-  top: 29%;
+  left: 0;
+  right: 0;
+  top: 50%;
   transform: translateY(-50%);
-  border: none;
-  padding: 4px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  background: url("/assets/icons/right-arrow.png") no-repeat center;
-  background-size: contain;
-  height: 48px;
-  width: 48px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
 }
 
-button.next:hover,
-button.next:active {
-    background: url("/assets/icons/active.png") no-repeat center;
-    background-size: contain;
-    transform: rotate(180deg);
+.slider-arrow .prev, .slider-arrow .next {
+  pointer-events: all;
 }
 
-
-button.prev {
-  position: absolute;
-  top: 25%;
-  border: none;
-  padding: 4px;
-  cursor: pointer;
-  /* transform: rotate(180deg); */
-  transition: background 0.3s ease, transform 0.3s ease;
-  background: url("/assets/icons/left.svg") no-repeat center;
-  background-size: contain;
-  height: 48px;
-  width: 48px;
+.slider-arrow .prev::before, .slider-arrow .next::before {
+  content: url(../icons/angle_arrow.svg);
+  display: block;
 }
 
-button.prev:hover,
-button.prev:active {
-    background: url("/assets/icons/active.png") no-repeat center;
-    background-size: contain;
+.slider-arrow .next::before {
+  transform: scaleX(-1);
 }
 
-
-button.prev { left: 0px; }
-button.next { right: 1px; }
+.slider-arrow .prev:hover:before, .slider-arrow .next:hover:before {
+  content: url(../icons/angle_arrow-active.svg);
+}
 
 .dots {
   display: flex;
@@ -99,8 +83,6 @@ button.next { right: 1px; }
     background: #194D44;
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
-
-
 } 
 
 
