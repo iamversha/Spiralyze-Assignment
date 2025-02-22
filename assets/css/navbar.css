@@ -1,0 +1,91 @@
+.navbar {
+  padding: 20px 0;
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  width: 100%;
+  color: var(--secondary-color); 
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ✅ Brand Logo - Always on the Left */
+.brand-logo img {
+  height: auto;
+  width: auto;
+  max-height: 50px; /* Adjust based on design */
+}
+
+/* ✅ Navbar Menu - Always on the Right */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Maintain 30px gap */
+}
+
+/* ✅ Hide Mobile Toggle by Default */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary-color); /* ✅ Menu toggle icon in primary color */
+}
+
+/* ✅ Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--secondary-color); /* ✅ Default text color is secondary */
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.nav-links a.active {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nav-contact .cta {
+  color: var(--primary-color); /* ✅ Phone number in primary */
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* ✅ Mobile View */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9); /* ✅ Light background for better contrast */
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+}

@@ -1,0 +1,59 @@
+
+.px{
+  padding: 0 16px;
+}
+.no-margin{
+  margin: 0;
+}
+/* .tooltip-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+} */
+.card-wrapper{
+  min-height: 204px;
+  height: auto;
+}
+.tooltip-box p{
+  font-size: 18px;
+  font-weight: 700;
+}
+.tooltip-box {
+  border: 2px solid #5BC8AF;
+  padding: 29px 20px;
+  text-align: center;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  cursor: pointer;
+  gap: 10px;
+  max-height: 96px;
+  height: 100%;
+}
+
+.tooltip-content {
+  position: absolute;
+  bottom: -107%;
+  transform: translateX(-50%);
+  background: url("/assets/images/tooltip-bg.png") no-repeat center;
+  color: white;
+  padding: 21px 32px;
+  border-radius: 3px;
+  white-space: nowrap;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  text-overflow:clip;
+  font-size: 12px;
+  left: 50%;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.tooltip-box:hover .tooltip-content {
+  opacity: 1;
+}

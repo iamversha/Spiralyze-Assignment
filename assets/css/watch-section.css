@@ -1,0 +1,28 @@
+.watch-section {
+  background-color: #153F38;
+  color: #FFF;
+  padding: 5% 0;
+
+  position: relative;
+}
+.watch-section > .container {
+  position: relative;
+  z-index: 5;
+}
+
+.watch-section::before{
+  content: "";
+  position: absolute;
+}
+
+.video-wrapper{
+  background-image: url('../images/watch-video-bg.jpg');
+  background-position: center right; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+}

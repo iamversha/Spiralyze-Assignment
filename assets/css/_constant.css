@@ -1,0 +1,19 @@
+:root {
+  /* Breakpoints */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  /* Colors */
+  --primary-color: #5BC8AF;
+  --secondary-color: #fff;
+  --dark-color: #333;
+
+  /* Spacing */
+  --container-padding: 16px;
+  --gutter-x: 1.5rem; /* Horizontal spacing between columns */
+  --gutter-y: 0; /* Vertical spacing between rows */
+}

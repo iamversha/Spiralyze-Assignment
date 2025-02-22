@@ -1,0 +1,66 @@
+/* 1️⃣ Reset Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2️⃣ Remove List Styles */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 3️⃣ Set Default Font and Color */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--secondary-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4️⃣ Ensure Images and Videos Are Responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5️⃣ Remove Button Defaults */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* 6️⃣ Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 7️⃣ Remove Anchor Link Underlines */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8️⃣ Remove Default Input Styles */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+/* 9️⃣ Set Default Cursor for Disabled Elements */
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

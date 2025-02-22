@@ -1,0 +1,132 @@
+
+.slider {
+  position: relative;
+  width:auto;
+  max-width: 1216px;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  min-height: 500px;
+}
+
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 10px;
+}
+
+button.next {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  background: url("/assets/images/right-arrow.png") no-repeat center;
+  background-size: contain;
+  height: 48px;
+  width: 48px;
+}
+
+button.next:hover,
+button.next:active {
+    background: url("/assets/images/active.png") no-repeat center;
+    background-size: contain;
+    transform: rotate(180deg);
+}
+
+
+button.prev {
+  position: absolute;
+  top: 39%;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  /* transform: rotate(180deg); */
+  transition: background 0.3s ease, transform 0.3s ease;
+  background: url("/assets/images/left.svg") no-repeat center;
+  background-size: contain;
+  height: 48px;
+  width: 48px;
+}
+
+button.prev:hover,
+button.prev:active {
+    background: url("/assets/images/active.png") no-repeat center;
+    background-size: contain;
+}
+
+
+button.prev { left: -1px; }
+button.next { right: 1px; }
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-left: 2px;
+  margin-top: 54px;
+
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  margin: 0 18px;
+  background: #EAEAEA;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active{
+  background: #5BC8AF;
+}
+
+.right-side{
+    max-width: 675px;
+    margin-top: 5px;
+    height: auto;
+    max-height: 269px;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    padding: 18px 70px;
+    background: #194D44;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+
+
+} 
+
+
+.align-items{
+  align-items: center;
+}
+.slider-heading{
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: left;
+}
+.slider-para{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #FFFFFF;
+  text-align: left;
+}
+.quotes img{
+margin-left: auto;
+display: block;
+padding-top: 19px;
+margin-right: -4px;
+}
+.left-side img{
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}

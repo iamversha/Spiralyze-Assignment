@@ -1,0 +1,76 @@
+/* 1️⃣ Input Field Wrapper */
+.input-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* 2️⃣ Input Styles */
+.input-field input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid var(--dark-color);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focused Input */
+.input-field input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(91, 200, 175, 0.5);
+}
+
+/* 3️⃣ Floating Label */
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  background: var(--secondary-color);
+  padding: 0 4px;
+  font-size: 16px;
+  color: var(--dark-color);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Label moves up when input is focused or has text */
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+/* 4️⃣ Helper Text */
+.helper-text {
+  font-size: 12px;
+  color: var(--dark-color);
+  margin-top: 4px;
+}
+
+/* 5️⃣ Error State */
+.input-field.error input {
+  border-color: red;
+}
+
+.input-field.error label {
+  color: red;
+}
+
+.input-field.error .helper-text {
+  color: red;
+}
+
+
+/* Demo example 
+<div class="input-field">
+    <input type="text" id="name" required placeholder=" " />
+    <label for="name">Your Name</label>
+    <span class="helper-text">This is a helper text</span>
+</div>
+*/

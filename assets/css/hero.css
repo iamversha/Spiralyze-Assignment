@@ -1,0 +1,85 @@
+.hero {
+  padding: calc(5% + 40px) 0;
+  background: url("../images/hero_bg_fill.jpg") no-repeat center center / cover;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+/* Ensure Hero Content Stays Inside the Grid */
+.hero .container {
+  text-align: left;
+}
+
+/* Hero Left */
+.hero-left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #48b09a;
+}
+
+/* Hero Right (Form Wrapper) */
+.hero-right {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.hero-bottom, .hero-bottom::before, .hero-bottom::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+}
+
+.hero-bottom {
+  padding-top: 111px;
+}
+
+.hero-bottom::before, .hero-bottom::after {
+  content: "";
+  background-position: left bottom;
+}
+
+.hero-bottom::before {
+  background-image: url('../images/bg-curve-1.svg');
+  height: 100%;
+}
+.hero-bottom::after {
+  background-image: url('../images/bg-curve-2.svg');
+  height: calc(100% - 21px);
+  z-index: 2;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 576px) {
+  .hero .container {
+    text-align: center;
+  }
+
+  .hero-right {
+    margin-top: 30px;
+  }
+}
