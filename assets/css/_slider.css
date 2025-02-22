@@ -28,7 +28,7 @@ button.next {
   padding: 4px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
-  background: url("/assets/images/right-arrow.png") no-repeat center;
+  background: url("/assets/icons/right-arrow.png") no-repeat center;
   background-size: contain;
   height: 48px;
   width: 48px;
@@ -36,7 +36,7 @@ button.next {
 
 button.next:hover,
 button.next:active {
-    background: url("/assets/images/active.png") no-repeat center;
+    background: url("/assets/icons/active.png") no-repeat center;
     background-size: contain;
     transform: rotate(180deg);
 }
@@ -50,7 +50,7 @@ button.prev {
   cursor: pointer;
   /* transform: rotate(180deg); */
   transition: background 0.3s ease, transform 0.3s ease;
-  background: url("/assets/images/left.svg") no-repeat center;
+  background: url("/assets/icons/left.svg") no-repeat center;
   background-size: contain;
   height: 48px;
   width: 48px;
@@ -58,7 +58,7 @@ button.prev {
 
 button.prev:hover,
 button.prev:active {
-    background: url("/assets/images/active.png") no-repeat center;
+    background: url("/assets/icons/active.png") no-repeat center;
     background-size: contain;
 }
 

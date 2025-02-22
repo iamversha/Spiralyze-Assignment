@@ -1,3 +1,2 @@
 # Spiralyze-Assignment
-
 Interview Assignment
