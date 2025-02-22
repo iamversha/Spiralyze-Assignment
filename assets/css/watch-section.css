@@ -1,28 +1,66 @@
 .watch-section {
-  background-color: #153F38;
   color: #FFF;
   padding: 5% 0;
 
   position: relative;
 }
-.watch-section > .container {
+
+.watch-section .content {
   position: relative;
   z-index: 5;
 }
 
-.watch-section::before{
+.watch-section::before,
+.watch-section::after {
   content: "";
   position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  z-index: 2;
 }
 
-.video-wrapper{
+.watch-section::before {
+  background-image: url('../images/video-curve-green.svg');
+  right: calc(47.5% - 30px);
+}
+
+.watch-section::after {
+  background-image: url('../images/video-curve-white.svg');
+  right: calc(47.5% - 45px);
+}
+
+.video-wrapper {
   background-image: url('../images/watch-video-bg.jpg');
-  background-position: center right; 
-  background-size: cover; 
+  background-position: center right;
+  background-size: cover;
   background-repeat: no-repeat;
   right: 0;
   bottom: 0;
   height: 100%;
-  width: 50%;
+  width: calc(50% + 15px);
   position: absolute;
+}
+
+.button-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.click-animation {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.click-animation:active {
+  transform: scale(0.9); 
+  opacity: 0.7;
 }
