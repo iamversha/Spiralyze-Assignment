@@ -1,19 +1,23 @@
 .slider {
   position: relative;
-  width:auto;
-  max-width: 1216px;
+  width: auto;
   margin: auto;
   overflow: hidden;
   text-align: center;
-  min-height: 462px;
-  margin-top: -46px;
+  margin-top: -56px;
+  padding-bottom: 30px;
 }
-
 
 .slider-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
   position: relative;
+  margin-bottom: 5px;
+  justify-content: center;
+}
+
+.slides {
+  
 }
 
 .slide {
@@ -33,11 +37,13 @@
   pointer-events: none;
 }
 
-.slider-arrow .prev, .slider-arrow .next {
+.slider-arrow .prev,
+.slider-arrow .next {
   pointer-events: all;
 }
 
-.slider-arrow .prev::before, .slider-arrow .next::before {
+.slider-arrow .prev::before,
+.slider-arrow .next::before {
   content: url(../icons/angle_arrow.svg);
   display: block;
 }
@@ -46,16 +52,18 @@
   transform: scaleX(-1);
 }
 
-.slider-arrow .prev:hover:before, .slider-arrow .next:hover:before {
+.slider-arrow .prev:hover:before,
+.slider-arrow .next:hover:before {
   content: url(../icons/angle_arrow-active.svg);
 }
 
 .dots {
   display: flex;
   justify-content: center;
-  margin-left: 2px;
-  margin-top: 54px;
-
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 10px);
 }
 
 .dot {
@@ -67,48 +75,52 @@
   cursor: pointer;
 }
 
-.dot.active{
+.dot.active {
   background: #5BC8AF;
 }
 
-.right-side{
-    max-width: 675px;
-    margin-top: 5px;
-    height: auto;
-    max-height: 269px;
-    height: auto;
-    width: 100%;
-    background-size: cover;
-    padding: 18px 70px;
-    background: #194D44;
-    border-bottom-right-radius: 12px;
-    border-top-right-radius: 12px;
-} 
+.right-side {
+  max-width: 675px;
+  margin-top: 5px;
+  height: auto;
+  max-height: 269px;
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  padding: 18px 70px;
+  background: #194D44;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+}
 
 
-.align-items{
+.align-items {
   align-items: center;
 }
-.slider-heading{
+
+.slider-heading {
   font-size: 24px;
   color: #FFFFFF;
   font-weight: 700;
   text-align: left;
 }
-.slider-para{
+
+.slider-para {
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
   text-align: left;
 }
-.quotes img{
-margin-left: auto;
-display: block;
-padding-top: 19px;
-margin-right: -4px;
+
+.quotes img {
+  margin-left: auto;
+  display: block;
+  padding-top: 19px;
+  margin-right: -4px;
 }
-.left-side img{
+
+.left-side img {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
