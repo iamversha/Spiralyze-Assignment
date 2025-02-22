@@ -19,6 +19,16 @@
   font-size: 18px;
   font-weight: 700;
 }
+
+.tooltip-box .info-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-box:hover .info-icon {
+  opacity: 1;
+}
+
 .tooltip-box {
   border: 2px solid #5BC8AF;
   padding: 29px 20px;
