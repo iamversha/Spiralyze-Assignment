@@ -1,6 +1,6 @@
 .watch-section {
   color: #FFF;
-  padding: 5% 0;
+  padding-top: 5%;
 
   position: relative;
 }
@@ -16,41 +16,26 @@
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right;
   z-index: 2;
 }
 
-.watch-section::before {
-  background-image: url('../images/video-curve-green.svg');
-  right: calc(47.5% - 30px);
-}
-
-.watch-section::after {
-  background-image: url('../images/video-curve-white.svg');
-  right: calc(47.5% - 45px);
-}
 
 .video-wrapper {
   background-image: url('../images/watch-video-bg.jpg');
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: calc(50% + 15px);
-  position: absolute;
+  min-height: 500px;
 }
 
 .button-container {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  bottom: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
 }
 
 .click-animation {
@@ -61,10 +46,11 @@
 }
 
 .click-animation:active {
-  transform: scale(0.9); 
+  transform: scale(0.9);
   opacity: 0.7;
 }
-.video-player{
+
+.video-player {
   transform: translate(-50%, -50%);
   height: auto;
   width: 80%;
@@ -72,8 +58,73 @@
   top: 50%;
   left: 50%;
   z-index: 99;
- display: none;
+  display: none;
 }
-.video-player.play{
+
+.video-player.play {
   display: block;
+}
+
+
+
+@media (max-width: 575px) {}
+
+@media (max-width: 991px) {
+
+  .watch-section::before,
+  .watch-section::after {
+    background-position: bottom center;
+    right: 0;
+  }
+
+  .watch-section::before {
+    background-image: url('../images/video-curve-green-bottom.svg');
+    height: calc(100% - 50% + 30px - 15px);
+  }
+
+  .watch-section::after {
+    background-image: url('../images/video-curve-white-bottom.svg');
+    height: calc(100% - 50% + 30px);
+  }
+
+  .video-wrapper {
+    padding-top: 65%;
+    position: relative;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .watch-section {
+    padding-bottom: 5%;
+  }
+
+  .watch-section::before,
+  .watch-section::after {
+    background-position: center right;
+    bottom: 0;
+  }
+
+  .watch-section::before {
+    background-image: url('../images/video-curve-green.svg');
+    right: calc(47.5% - 30px);
+  }
+
+  .watch-section::after {
+    background-image: url('../images/video-curve-white.svg');
+    right: calc(47.5% - 45px);
+  }
+
+  .video-wrapper {
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: calc(50% + 15px);
+    position: absolute;
+  }
+
+  .button-container {
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+  }
 }
