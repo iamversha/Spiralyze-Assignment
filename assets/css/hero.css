@@ -1,5 +1,6 @@
 .hero {
-  padding: calc(5% + 40px) 0;
+  padding-top: calc(10% + 40px);
+  padding-bottom: 165px;
   background: url("../images/hero_bg_fill.jpg") no-repeat center center / cover;
   color: var(--secondary-color);
   position: relative;
@@ -42,11 +43,12 @@
 .hero-bottom::before, .hero-bottom::after {
   content: "";
   background-position: left bottom;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 .hero-bottom::before {
   background-image: url('../images/bg-curve-1.svg');
-  height: 100%;
 }
 .hero-bottom::after {
   background-image: url('../images/bg-curve-2.svg');
@@ -62,5 +64,20 @@
 
   .hero-right {
     margin-top: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero-left h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-bottom::before, .hero-bottom::after {
+    background-size: contain;
+  }
+  .hero-bottom {
+    padding-top: 8%;
   }
 }
