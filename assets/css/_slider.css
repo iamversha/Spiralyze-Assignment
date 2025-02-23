@@ -16,10 +16,6 @@
   justify-content: center;
 }
 
-.slides {
-  
-}
-
 .slide {
   min-width: 100%;
   padding: 10px;
@@ -79,15 +75,12 @@
   background: #5BC8AF;
 }
 
+
 .right-side {
-  max-width: 675px;
-  margin-top: 5px;
-  height: auto;
-  max-height: 269px;
-  height: auto;
-  width: 100%;
-  background-size: cover;
-  padding: 18px 70px;
+  margin-left: 4px;
+  padding: 14px 34px;
+  max-height: 194px;
+  padding: 17px 24px;
   background: #194D44;
   border-bottom-right-radius: 12px;
   border-top-right-radius: 12px;
@@ -98,29 +91,103 @@
   align-items: center;
 }
 
-.slider-heading {
-  font-size: 24px;
-  color: #FFFFFF;
-  font-weight: 700;
-  text-align: left;
+.quotes img {
+  padding: 0px;
+  height: 31px;
+  width: 40px;
+  margin-right: 6px;
 }
 
-.slider-para {
+.left-side img {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: auto;
+  width: 100%;
+  max-width: 180px;
+}
+
+.slider-heading {
   font-size: 18px;
+  margin-bottom: 0px;
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
   text-align: left;
 }
 
-.quotes img {
-  margin-left: auto;
-  display: block;
-  padding-top: 19px;
-  margin-right: -4px;
+.slider-para {
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: left;
 }
 
-.left-side img {
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+.slider-arrow {
+  display: none;
+}
+
+@media screen and (min-width:1400px) {
+  .slider-arrow {
+    display: flex;
+  }
+
+  .left-side {
+    margin-right: 18px;
+  }
+
+  .right-side {
+   
+  }
+
+}
+
+@media screen and (min-width:992px) {
+
+  .slider-heading {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .slider-para {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: left;
+  }
+
+  .right-side {
+    max-width: 675px;
+    margin-top: 5px;
+    height: auto;
+    min-height: 269px;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    padding: 18px 70px;
+    background: #194D44;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .quotes img {
+    margin-left: auto;
+    display: block;
+    padding-top: 19px;
+    margin-right: -4px;
+    width: 100%;
+    height: auto;
+    max-width: 60px;
+  }
+
+  .left-side img {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: auto;
+    width: 100%;
+    max-width: 269px;
+  }
+
 }
