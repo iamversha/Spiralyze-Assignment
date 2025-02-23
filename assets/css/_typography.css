@@ -1,8 +1,11 @@
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   margin-bottom: 0.5em;
+}
+h1{
+  font-size: 36px;
+  line-height: 46px;
 }
 
 p {
@@ -12,7 +15,6 @@ p {
   margin-bottom: 1em;
 }
 
-/* Links */
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -24,4 +26,11 @@ a:hover {
 }
 .text-center{
   text-align: center;
+}
+
+@media screen and (max-width:360px){
+  h1{
+    font-size: 24px;
+    line-height: 32px;
+  } 
 }

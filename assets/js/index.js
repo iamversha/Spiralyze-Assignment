@@ -43,14 +43,28 @@ function showSlides(n) {
 
 document.getElementById("playButton").addEventListener("click", function () {
   let video = document.getElementById("myVideo");
+  let modalOpen = document.getElementById("videoModal");
   let videoPlayer = document.getElementById("videoPlayer");
+  const closeBtn = document.querySelector(".close");
+
 
   if (video.paused) {
+    debugger
+    modalOpen.style.display= "flex";
     video.muted = false; // Ensure sound plays
     video.play();
     videoPlayer.classList.add("play");
-  } else {
+  } 
+  
+
+  
+
+  else {
+
+    closeBtn.style.display= "none";
+    modalOpen.style.display= "none";
     video.pause();
     videoPlayer.classList.remove("play");
   }
 });
+

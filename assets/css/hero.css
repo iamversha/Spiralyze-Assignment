@@ -6,18 +6,18 @@
   position: relative;
 }
 
-/* Ensure Hero Content Stays Inside the Grid */
 .hero .container {
   text-align: left;
 }
 
-/* Hero Left */
 .hero-left h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
-
+.hero-left{
+  text-align: center;
+}
 
 .hero-left p {
   font-size: 1.125rem;
@@ -26,8 +26,16 @@
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+    display: block;
+    line-height: 43px;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
 }
+ .sub-heading {
+    -webkit-text-stroke: 2px #333333;
+    color: transparent;
+}
+
 
 .hero-bottom, .hero-bottom::before, .hero-bottom::after {
   position: absolute;
@@ -56,7 +64,6 @@
   z-index: 2;
 }
 
-/* Responsive Tweaks */
 @media (max-width: 576px) {
   .hero .container {
     text-align: center;
@@ -65,12 +72,21 @@
   .hero-right {
     margin-top: 30px;
   }
+ 
 }
 
 @media (min-width: 576px) {
   .hero-left h1 {
     font-size: 3rem;
   }
+ 
+}
+
+@media (min-width: 992px) {
+  .hero-left{
+    text-align: left;
+  }
+ 
 }
 
 @media (min-width: 1400px) {
@@ -79,5 +95,8 @@
   }
   .hero-bottom {
     padding-top: 8%;
+  }
+  .hero-left{
+    text-align: left;
   }
 }

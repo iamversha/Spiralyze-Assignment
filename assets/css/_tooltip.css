@@ -5,12 +5,7 @@
 .no-margin{
   margin: 0;
 }
-/* .tooltip-wrapper{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  
-} */
+
 .card-wrapper{
   min-height: 204px;
   height: auto;

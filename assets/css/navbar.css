@@ -14,42 +14,37 @@
   align-items: center;
 }
 
-/* ✅ Brand Logo - Always on the Left */
 .brand-logo img {
   height: auto;
   width: auto;
-  max-height: 50px; /* Adjust based on design */
+  max-height: 50px; 
 }
 
-/* ✅ Navbar Menu - Always on the Right */
-.navbar-menu {
-  display: flex;
-  align-items: center;
-  gap: 30px; /* Maintain 30px gap */
+.navbar-menu{
+  display: block;
 }
-
-/* ✅ Hide Mobile Toggle by Default */
 .navbar-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: var(--primary-color); /* ✅ Menu toggle icon in primary color */
+  color: var(--primary-color); 
 }
 
-/* ✅ Navigation Links */
 .nav-links {
   display: flex;
+  justify-content: end;
   gap: 30px;
   list-style: none;
   padding: 0;
   margin: 0;
+  padding: 20px 0;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--secondary-color); /* ✅ Default text color is secondary */
+  color: var(--secondary-color); 
   font-weight: 400;
   transition: all 0.3s ease;
 }
@@ -68,13 +63,26 @@
 }
 
 .nav-contact .cta {
-  color: var(--primary-color); /* ✅ Phone number in primary */
+  color: var(--primary-color); 
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+.separator{
+  display: none;
+}
 
-/* ✅ Mobile View */
+@media screen and (min-width:992){
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+  }
+  .separator{
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-menu {
     display: none;
@@ -82,7 +90,7 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background: rgba(255, 255, 255, 0.9); /* ✅ Light background for better contrast */
+    background: rgba(255, 255, 255, 0.9); 
     width: 200px;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -93,7 +101,7 @@
   }
   .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 30px;
     flex-direction: column;
     align-items: start;
     padding: 0;
@@ -115,5 +123,6 @@
   }
   .nav-contact{
     margin-right: auto;
+    margin-top: 30px;
   }
 }

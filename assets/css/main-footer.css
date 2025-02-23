@@ -1,3 +1,10 @@
 .main-footer {
   padding-block: 38px;
 }
+
+@media screen and (max-width:567px){
+  .footer-para{
+    font-size: 12px;
+    text-align: center;
+    }
+}

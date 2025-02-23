@@ -27,7 +27,7 @@
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 500px;
+  min-height: 461px;
 }
 
 .button-container {
@@ -64,8 +64,9 @@
 .video-player.play {
   display: block;
 }
-
-
+.break-tag{
+  display: contents;
+}
 
 @media (max-width: 575px) {}
 
@@ -76,10 +77,16 @@
     background-position: bottom center;
     right: 0;
   }
-
+  .watch-section h1{
+    text-align: center;
+  }
+  .break-tag{
+    display: block;
+  }
+  
   .watch-section::before {
     background-image: url('../images/video-curve-green-bottom.svg');
-    height: calc(100% - 50% + 30px - 15px);
+    height: calc(100% - 44% + 30px - 15px);
   }
 
   .watch-section::after {
@@ -127,4 +134,50 @@
     bottom: 50%;
     transform: translate(-50%, 50%);
   }
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+  position: relative;
+        background: #337a69;
+        padding: 20px 30px;
+        border-radius: 8px;
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.close {
+  font-weight: 700;
+  position: absolute;
+  top: -2px;
+  right: 11px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #eaeaea;
+
+}
+
+.close:hover {
+    color:#53b39e;
+}
+
+
 }

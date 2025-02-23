@@ -14,6 +14,6 @@
 
   /* Spacing */
   --container-padding: 16px;
-  --gutter-x: 1.5rem; /* Horizontal spacing between columns */
-  --gutter-y: 0; /* Vertical spacing between rows */
+  --gutter-x: 1.5rem; 
+  --gutter-y: 0; 
 }
