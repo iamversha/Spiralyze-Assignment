@@ -41,26 +41,31 @@ function showSlides(n) {
   dots[slideIndex].classList.add("active");
 }
 
+
+// video player
+let modalOpen = document.getElementById("videoModal");
+let video = document.getElementById("myVideo");
+
 document.getElementById("playButton").addEventListener("click", function () {
-  let video = document.getElementById("myVideo");
-  let modalOpen = document.getElementById("videoModal");
-  let videoPlayer = document.getElementById("videoPlayer");
-  const closeBtn = document.querySelector(".close");
-
-
   if (video.paused) {
-    modalOpen.style.display= "flex";
-    video.muted = false; // Ensure sound plays
+    modalOpen.style.display = "flex";
+    video.muted = false;
     video.play();
-    videoPlayer.classList.add("play");
-  } 
-
-  else {
-
-    closeBtn.style.display= "none";
-    modalOpen.style.display= "none";
+  } else {
+    modalOpen.style.display = "none";
     video.pause();
-    videoPlayer.classList.remove("play");
+  }
+});
+
+document.querySelector(".close").addEventListener("click", function () {
+  video.pause();
+  modalOpen.style.display = "none";
+});
+
+document.querySelector(".modal").addEventListener("click", function (e) {
+  if (e.target.classList.contains("modal")) {
+    video.pause();
+    modalOpen.style.display = "none";
   }
 });
 

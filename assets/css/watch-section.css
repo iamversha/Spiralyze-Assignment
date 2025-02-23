@@ -21,7 +21,6 @@
   z-index: 2;
 }
 
-
 .video-wrapper {
   background-image: url('../images/watch-video-bg.jpg');
   background-position: center right;
@@ -50,21 +49,7 @@
   opacity: 0.7;
 }
 
-.video-player {
-  transform: translate(-50%, -50%);
-  height: auto;
-  width: 80%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 99;
-  display: none;
-}
-
-.video-player.play {
-  display: block;
-}
-.break-tag{
+.break-tag {
   display: contents;
 }
 
@@ -77,13 +62,15 @@
     background-position: bottom center;
     right: 0;
   }
-  .watch-section h1{
+
+  .watch-section h1 {
     text-align: center;
   }
-  .break-tag{
+
+  .break-tag {
     display: block;
   }
-  
+
   .watch-section::before {
     background-image: url('../images/video-curve-green-bottom.svg');
     height: calc(100% - 44% + 30px - 15px);
@@ -135,7 +122,6 @@
     transform: translate(-50%, 50%);
   }
 
-
   .modal {
     display: none;
     position: fixed;
@@ -147,37 +133,35 @@
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-}
+  }
 
-.modal-content {
-  position: relative;
-        background: #337a69;
-        padding: 20px 30px;
-        border-radius: 8px;
-        max-width: 600px;
-        width: 100%;
-        text-align: center;
-}
+  .modal-content {
+    position: relative;
+    background: #337a69;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
 
-video {
+  video {
     width: 100%;
     border-radius: 5px;
-}
+  }
 
-.close {
-  font-weight: 700;
-  position: absolute;
-  top: -2px;
-  right: 11px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #eaeaea;
+  .close {
+    font-weight: 700;
+    position: absolute;
+    top: -2px;
+    right: 11px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #eaeaea;
 
-}
+  }
 
-.close:hover {
-    color:#53b39e;
-}
-
-
+  .close:hover {
+    color: #53b39e;
+  }
 }

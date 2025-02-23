@@ -15,7 +15,8 @@
   font-weight: 700;
   margin-bottom: 20px;
 }
-.hero-left{
+
+.hero-left {
   text-align: center;
 }
 
@@ -26,18 +27,21 @@
 }
 
 .text-stroke {
-    display: block;
-    line-height: 43px;
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
+  display: block;
+  line-height: 43px;
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
 }
- .sub-heading {
-    -webkit-text-stroke: 2px #333333;
-    color: transparent;
+
+.sub-heading {
+  -webkit-text-stroke: 2px #333333;
+  color: transparent;
 }
 
 
-.hero-bottom, .hero-bottom::before, .hero-bottom::after {
+.hero-bottom,
+.hero-bottom::before,
+.hero-bottom::after {
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -48,7 +52,8 @@
   padding-top: 111px;
 }
 
-.hero-bottom::before, .hero-bottom::after {
+.hero-bottom::before,
+.hero-bottom::after {
   content: "";
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -58,6 +63,7 @@
 .hero-bottom::before {
   background-image: url('../images/bg-curve-1.svg');
 }
+
 .hero-bottom::after {
   background-image: url('../images/bg-curve-2.svg');
   height: calc(100% - 21px);
@@ -72,31 +78,35 @@
   .hero-right {
     margin-top: 30px;
   }
- 
+
 }
 
 @media (min-width: 576px) {
   .hero-left h1 {
     font-size: 3rem;
   }
- 
+
 }
 
 @media (min-width: 992px) {
-  .hero-left{
+  .hero-left {
     text-align: left;
   }
- 
+
 }
 
 @media (min-width: 1400px) {
-  .hero-bottom::before, .hero-bottom::after {
+
+  .hero-bottom::before,
+  .hero-bottom::after {
     background-size: contain;
   }
+
   .hero-bottom {
     padding-top: 8%;
   }
-  .hero-left{
+
+  .hero-left {
     text-align: left;
   }
 }
