@@ -25,8 +25,8 @@
   letter-spacing: -0.56px;
 }
 
-.text-stroke{
-  display: block;
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
 }
 
 .hero-bottom, .hero-bottom::before, .hero-bottom::after {
