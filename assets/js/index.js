@@ -49,15 +49,11 @@ document.getElementById("playButton").addEventListener("click", function () {
 
 
   if (video.paused) {
-    debugger
     modalOpen.style.display= "flex";
     video.muted = false; // Ensure sound plays
     video.play();
     videoPlayer.classList.add("play");
   } 
-  
-
-  
 
   else {
 
